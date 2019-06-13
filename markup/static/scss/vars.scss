@@ -1,0 +1,25 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+
+/** colors */
+$white: #fff;
+$black: #000;
+$red: #b40000;
+
+$bg: $white;
+$color: $black;
+$color-link: $white;
+$error: $red;
+
+/** font */
+$default-font-size: 16;
+$ff: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* Media variables */
+$phones:   480px;
+$l-phones: 575px;
+$tablets:  767px;
+$medium:   991px;
+$large:    1199px;
+$x-large:  1439px;
+$retina2x: screen and (min-resolution: 120dpi), screen and (min-resolution: 1.25dppx);

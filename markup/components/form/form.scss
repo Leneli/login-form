@@ -1,0 +1,110 @@
+.form {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 625px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: rgba($bg, .1);
+    box-shadow: 0 2px 32px rgba($black, .5);
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(#f0f0f0, .25);
+        box-shadow: 0 0 20px 0 rgba(#f0f0f0, .5) inset;
+        z-index: 1;
+    }
+
+    & > * {
+        position: relative;
+        z-index: 5;
+    }
+}
+
+.form__bg_blur {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(7px);
+    background-position: center;
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    @include phones {
+        background-size: auto 100vh;
+    }
+}
+
+.form__return {
+    @include transition(opacity);
+
+    margin-right: auto;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.form__box {
+    display: block;
+    width: 100%;
+    max-width: 370px;
+    margin: auto;
+}
+
+.form__item {
+    margin-bottom: 15px;
+}
+
+
+/** Input */
+.input {
+    @include transition();
+
+    display: block;
+    width: 100%;
+    padding: 13px 25px;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 25px;
+    border: 1px solid rgba($bg, .4);
+    background-color: rgba($bg, 0);
+    color: rgba($bg, .4);
+    text-align: center;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    &::-ms-expand { display: none; }
+
+    &::placeholder,
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder {
+        color: rgba($bg, .4);
+    }
+
+    &:focus {
+
+    }
+}
+
+.input_submit {
+    width: auto;
+    margin: auto;
+}

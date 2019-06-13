@@ -1,0 +1,24 @@
+include ../avatar/avatar
+
+mixin form(data)
+    .form
+        .form__bg_blur(style="background-image: url(__static__img/content/purple_sunset-wallpaper-2880x1800.jpg);")
+
+        a.link.form__return(href="#") ← вернуться
+
+        +avatar("__static__img/content/user.png")
+
+        form.form__box(action="/", method="post")
+            .form__item
+                input.input(type="tel", name="", placeholder="Номер телефона")
+            .form__item
+                input.input(type="password", name="", placeholder="Пароль")
+
+            .form__item
+                label
+                    input(type="radio", name="")
+                    input(type="radio", name="")
+                    span.link Запомнить
+                a.link(href="#") Забыл пароль
+
+            input.input.input_submit(type="submit", value="войти")

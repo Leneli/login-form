@@ -1,0 +1,85 @@
+// Mixins.
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+@function em($pixels, $context: $default-font-size) {
+    @return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $default-font-size) {
+    @return #{$pixels/$context}rem;
+}
+
+@mixin transition($props...) {
+    transition-property: $props;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+    will-change: $props;
+}
+
+// MEDIA QUERIES
+// NOT mobile-first
+@mixin x-large() {
+    @media screen and (max-width: $x-large) {
+        @content;
+    }
+}
+
+@mixin large() {
+    @media screen and (max-width: $large) {
+        @content;
+    }
+}
+
+@mixin medium() {
+    @media screen and (max-width: $medium) {
+        @content;
+    }
+}
+
+@mixin tablets() {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin l-phones() {
+    @media screen and (max-width: $l-phones) {
+        @content;
+    }
+}
+
+@mixin phones() {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}

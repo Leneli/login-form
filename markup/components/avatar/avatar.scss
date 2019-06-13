@@ -1,0 +1,18 @@
+.avatar {
+    display: block;
+    width: 97px;
+    height: 97px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include phones {
+        margin-top: 20px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+}
