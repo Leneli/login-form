@@ -10,15 +10,42 @@ mixin form(data)
 
         form.form__box(action="/", method="post")
             .form__item
-                input.input(type="tel", name="", placeholder="Номер телефона")
-            .form__item
-                input.input(type="password", name="", placeholder="Пароль")
+                input#login.input.js-phone-mask(
+                    name="login"
+                    type="text"
+                    placeholder="Номер телефона"
+                    required
+                    pattern="\d{1} \(\d{3}\) \d{3}-\d{2}-\d{2}"
+                )
+                .form__msg.hide Поле заполнено некорректно
 
             .form__item
-                label
-                    input(type="radio", name="")
-                    input(type="radio", name="")
-                    span.link Запомнить
-                a.link(href="#") Забыл пароль
+                input#password.input(
+                    name="password"
+                    type="password"
+                    placeholder="Пароль"
+                    required
+                    pattern="\w{4}\w+"
+                )
+                .form__msg.hide Минимальная длина пароля 5 символов
 
-            input.input.input_submit(type="submit", value="войти")
+            .form__item.form__item_flex
+                +toggle()
+                a.link_underline(href="#forget") Забыл пароль
+
+            input#submit.input.input_submit(type="submit", value="войти", disabled)
+
+
+mixin toggle(data)
+    if !data
+        -
+            var data = {
+                name: "remember",
+                label: "Запомнить"
+            };
+    label.toggle-wrap
+        span.toggle
+            input.checkbox(type="checkbox", name=data.name)
+            span.knobs
+            span.layer
+        span.link= data.label

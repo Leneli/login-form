@@ -1,8 +1,7 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../components/head/head.pug
-    include ../components/footer/footer.pug
+    include ../components/head/head
 
     head
         +head(head.defaults)
@@ -12,12 +11,6 @@ html(class="no-js", lang="ru")
         section.page__wrapper
 
             //- Include your components here
-
-            .page__buffer
-
-        .page__footer
-            +footer()
-
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
 

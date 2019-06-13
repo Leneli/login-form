@@ -4,7 +4,9 @@
   "description": "Your awesome project description",
   "main": "gulpfile.js",
   "directories": {},
-  "dependencies": {},
+  "dependencies": {
+    "cleave.js": "^1.5.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1"
   },
