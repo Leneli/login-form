@@ -5,9 +5,15 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
-    "cleave.js": "^1.5.0"
+    "@babel/polyfill": "^7.4.4",
+    "cleave.js": "^1.5.0",
+    "es6-promise": "^4.2.8",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "gulp": "^3.9.1"
   },
   "scripts": {

@@ -1,3 +1,6 @@
+require('es6-promise/auto'); // polyfill for IE
+
+import { fetch } from 'whatwg-fetch'; // polyfill for IE
 import { VALID_CLASS_NAME } from './CONSTANTS';
 
 export default function () {
@@ -9,9 +12,8 @@ export default function () {
   var observer;
 
   if (submit && loginInp && passInp) {
-    validateMap
-      .set(loginInp, false)
-      .set(passInp, false)
+    validateMap.set(loginInp, false)
+    validateMap.set(passInp, false)
 
     observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
@@ -36,15 +38,12 @@ export default function () {
       event.preventDefault();
 
       var data = new FormData(this.form);
-
-      return fetch('/', {
+      var options = {
         method: 'post',
         body: data
-      })
-        .then(response => {
-          console.log(response.status)
-          /** ...  */
-        })
+      }
+
+      return fetch('/', options).then(function (response) { console.log(response.status) });
     })
   }
 }

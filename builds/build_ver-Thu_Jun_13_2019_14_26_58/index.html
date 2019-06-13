@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>default title</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <!--[if IE 9 ]><link href="static/css/main_ie9zxyn1p.min.css" rel="stylesheet" type="text/css"><![endif]-->
+        <!--[if (gt IE 9)|!(IE)]><!-->
+        <link href="static/css/mainzxyn1p.min.css" rel="stylesheet" type="text/css">
+        <!--<![endif]-->
+        <meta property="og:title" content="#{data.title}">
+        <meta property="og:title" content="">
+        <meta property="og:url" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="500">
+        <meta property="og:image:height" content="300">
+        <meta property="twitter:description" content="">
+        <link rel="image_src" href="#">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        </script>
+    </head>
+
+    <body class="page">
+        <main class="page__wrapper" style="background-image: url(static/img/content/purple_sunset-wallpaper-2880x1800.jpg);">
+            <div class="form">
+                <div class="form__bg_blur" style="background-image: url(static/img/content/purple_sunset-wallpaper-2880x1800.jpg);"></div><a class="link form__return" href="#">← вернуться</a>
+                <div class="avatar">
+                    <img src="static/img/content/user.png" alt="User">
+                </div>
+                <form class="form__box" action="/" method="post">
+                    <div class="form__item">
+                        <input class="input js-phone-mask" id="login" name="login" type="text" placeholder="Номер телефона" required pattern="d{1} (d{3}) d{3}-d{2}-d{2}">
+                        <div class="form__msg hide">Поле заполнено некорректно</div>
+                    </div>
+                    <div class="form__item">
+                        <input class="input" id="password" name="password" type="password" placeholder="Пароль" required pattern="w{4}w+">
+                        <div class="form__msg hide">Минимальная длина пароля 5 символов</div>
+                    </div>
+                    <div class="form__item form__item_flex">
+                        <label class="toggle-wrap"><span class="toggle">
+                    <input class="checkbox" type="checkbox" name="remember"><span class="knobs"></span><span class="layer"></span></span><span class="link">Запомнить</span>
+                        </label><a class="link_underline" href="#forget">Забыл пароль</a>
+                    </div>
+                    <input class="input input_submit" id="submit" type="submit" value="войти" disabled>
+                </form>
+            </div>
+        </main>
+
+
+        <script src="static/js/mainzxyn1p.min.js"></script>
+    </body>
+
+</html>

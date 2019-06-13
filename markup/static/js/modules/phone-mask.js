@@ -4,7 +4,7 @@ import inputValidateClasslist from './input-validate-classlist';
 var Cleave = require('cleave.js');
 
 export default function () {
-  var inputs = document.querySelectorAll(`input.${constants.PTONE_MASK_CLASS_NAME}`);
+  var inputs = document.querySelectorAll('input.' + constants.PTONE_MASK_CLASS_NAME);
 
   for (let i = 0; i < inputs.length; i++) {
     const inp = inputs[i];
