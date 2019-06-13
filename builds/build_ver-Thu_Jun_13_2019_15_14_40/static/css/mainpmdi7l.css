@@ -469,7 +469,7 @@ html, body {
   z-index: 1;
 }
 
-.form > * {
+.form > *:not(.form__bg_blur) {
   position: relative;
   z-index: 5;
 }
@@ -639,11 +639,11 @@ html, body {
 }
 
 .input::-webkit-input-placeholder, .input::-moz-placeholder, .input:-ms-input-placeholder, .input:-moz-placeholder, .input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .input::-webkit-input-placeholder, .input::-moz-placeholder, .input:-ms-input-placeholder, .input:-moz-placeholder, .input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .input:empty {

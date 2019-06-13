@@ -24,7 +24,7 @@
         z-index: 1;
     }
 
-    & > * {
+    & > *:not(.form__bg_blur) {
         position: relative;
         z-index: 5;
     }
@@ -173,7 +173,7 @@
     &:-ms-input-placeholder,
     &:-moz-placeholder,
     &::placeholder {
-        color: rgba($bg, .4);
+        color: rgba($bg, .4)!important;
     }
 
     &:empty {
